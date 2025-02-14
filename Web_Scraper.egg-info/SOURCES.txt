@@ -1,0 +1,8 @@
+setup.py
+Web_Scraper.egg-info/PKG-INFO
+Web_Scraper.egg-info/SOURCES.txt
+Web_Scraper.egg-info/dependency_links.txt
+Web_Scraper.egg-info/requires.txt
+Web_Scraper.egg-info/top_level.txt
+webscraping/LLMChat.py
+webscraping/__init__.py
