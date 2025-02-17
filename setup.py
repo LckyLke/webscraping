@@ -15,6 +15,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
+            'webai-chat=webscraping.scripts.chat_cli:main',
         ],
-    },
+    }
 )

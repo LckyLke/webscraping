@@ -1,0 +1,53 @@
+# Ignore Python bytecode and cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore distribution and packaging
+.Python
+build/
+dist/
+downloads/
+.eggs/
+*.egg-info/
+
+# Ignore environment files and folders
+.env
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Ignore caches
+*.cache
+.pytest_cache/
+
+# Ignore unit test / coverage
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+
+# Ignore Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# Ignore pyenv
+.python-version
+
+# Ignore PyInstaller
+*.spec
+
+# Ignore installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore mypy cache
+.mypy_cache/
+.dmypy.json

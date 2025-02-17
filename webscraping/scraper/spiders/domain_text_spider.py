@@ -100,7 +100,6 @@ class ScrapyManager:
         )
         self.process.start()
 
-# Example usage with LLM integration
 class LLMContextManager:
     def __init__(self, scrapy_manager: ScrapyManager):
         self.scrapy_manager = scrapy_manager

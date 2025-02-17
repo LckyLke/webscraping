@@ -1,7 +1,6 @@
 from openai import OpenAI
 
-import argparse
-from scraper.scraper.spiders.domain_text_spider import ScrapyManager, LLMContextManager
+from webscraping.scraper.spiders.domain_text_spider import LLMContextManager
 
 class OpenAIChatHandler:
     def __init__(self, llm_context_manager: LLMContextManager, api_key: str):
@@ -35,33 +34,3 @@ class OpenAIChatHandler:
             {"role": "assistant", "content": assistant_response}
         ])
         return assistant_response
-
-def main():
-    parser = argparse.ArgumentParser(description='Web-aware AI Chat')
-    parser.add_argument('--url', type=str, required=True, help='Starting URL for context gathering')
-    parser.add_argument('--api_key', type=str, required=True, help='OpenAI API key')
-    args = parser.parse_args()
-
-    # Initialize components
-    scrapy_manager = ScrapyManager()
-    llm_manager = LLMContextManager(scrapy_manager)
-    llm_manager.build_context(args.url)
-
-    chat_handler = OpenAIChatHandler(llm_manager, args.api_key)
-
-    print("Context loaded. Start chatting (type 'exit' to quit)!")
-    while True:
-        try:
-            user_input = input("You: ")
-            if user_input.lower() in ['exit', 'quit']:
-                break
-
-            response = chat_handler.query_llm(user_input)
-            print(f"\nAssistant: {response}\n")
-
-        except KeyboardInterrupt:
-            print("\nExiting...")
-            break
-
-if __name__ == "__main__":
-    main()
