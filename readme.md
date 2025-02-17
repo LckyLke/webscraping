@@ -5,7 +5,7 @@ An AI chat application using LLMs with custom web-scraped context.
 ## Setup
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/LckyLke/webscraping.git
    ```
 2. Create a conda environment and install dependencies:
    ```bash
